@@ -71,10 +71,6 @@ class BlogPost extends Component{
         )
     }
 
-    componentDidMount(){
-        this.getData();
-    }
-
     handleFormChange = (event) => {
         let formBlogPostNew = {...this.state.formBlogPost};
         let timestamp = new Date().getTime();
@@ -93,6 +89,15 @@ class BlogPost extends Component{
         }else{
             this.postData();
         }
+    }
+
+    handleDetail = (id) => {
+        // console.log(this)
+        this.props.history.push(`/detail/${id}`);
+    }
+
+    componentDidMount(){
+        this.getData();
     }
 
     render() {
@@ -114,7 +119,12 @@ class BlogPost extends Component{
                 <p className="section-title">Recent Posts</p>
                 {
                     this.state.post.map(post => {
-                        return <Post key={post.id} data={post} update={this.handleUpdate} remove={this.handleRemove}/>
+                        return <Post 
+                                    key={post.id} 
+                                    data={post} 
+                                    update={this.handleUpdate} 
+                                    remove={this.handleRemove} 
+                                    detail={this.handleDetail}/>
                     })
                 }
             </Fragment>

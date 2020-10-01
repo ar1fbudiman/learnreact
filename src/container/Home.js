@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Produk from './pages/Produk/Produk.js'
 import BlogPost from './pages/Blog/BlogPost.js'
+import Detail from './pages/Blog/Detail/Detail.js'
+
 class Home extends Component {
     render(){
         return (
@@ -21,12 +18,9 @@ class Home extends Component {
                         </li>
                     </ul>
                     <Switch>
-                        <Route exact path="/">
-                            <BlogPost/>
-                        </Route>
-                        <Route path="/produk">
-                            <Produk/>
-                        </Route>
+                        <Route exact path="/" component={BlogPost} />
+                        <Route path="/detail/:idPost" component={Detail} />
+                        <Route path="/produk" component={Produk}/>
                     </Switch>
                 </div>
             </Router>
