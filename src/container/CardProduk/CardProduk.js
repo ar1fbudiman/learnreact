@@ -1,8 +1,8 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 
 class CardProduk extends Component {
     state = {
-        orders: 4
+        orders: 0
     }
 
     handleCounterChange = (newValue) => {
@@ -37,7 +37,7 @@ class CardProduk extends Component {
                 <p className="product-price">Rp 120,000</p>
                 <div className="counter">
                     <button className="minus" onClick={this.handleMinus}>-</button>
-                    <input type="text" value={this.state.orders}/>
+                    <input type="text" readOnly value={this.state.orders}/>
                     <button className="plus" onClick={this.handlePlus}>+</button>
                 </div>
             </div>

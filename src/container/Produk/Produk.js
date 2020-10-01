@@ -5,7 +5,7 @@ import CardProduk from '../CardProduk/CardProduk.js';
 
 class Produk extends Component {
     state = {
-        orders: 4
+        orders: 0
     }
 
     handleCounterChange = (newValue) => {
