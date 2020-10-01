@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import './Produk.css';
-import iconTroli from '../../shopping-cart.svg';
-import CardProduk from '../CardProduk/CardProduk.js';
+import iconTroli from '../../../shopping-cart.svg';
+import CardProduk from './CardProduk/CardProduk.js';
 
 class Produk extends Component {
     state = {

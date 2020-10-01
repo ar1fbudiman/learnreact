@@ -5,8 +5,8 @@ import {
     Route,
     Link
   } from "react-router-dom";
-import Produk from './Produk/Produk.js'
-import BlogPost from './Blog/BlogPost.js'
+import Produk from './pages/Produk/Produk.js'
+import BlogPost from './pages/Blog/BlogPost.js'
 class Home extends Component {
     render(){
         return (

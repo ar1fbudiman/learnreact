@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import Post from '../../component/PostComp/PostComp.js';
+import Post from './PostComp/PostComp.js';
 import './BlogPost.css';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
